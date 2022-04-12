@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">inSpending</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="accounts">Tài khoản</string>
+    <string name="categories">Danh Mục</string>
+    <string name="type">Loại</string>
+    <string name="currencyofAccount">Đơn bị tiền tệ</string>
+    <string name="Destriptions">Mô tả</string>
+    <string name="expenses">Thu nhập</string>
+    <string name="cost">Chi phí</string>
+    <string name="overview">Tổng quát</string>
+    <string name="select_date">Tùy chọn thời gian </string>
+    <string name="addTransaction">Thêm giao dịch</string>
+    <string name="add_accounts_succsessfully">Thêm tài khoản thành công</string>
+    <string name="cancel_transaction">Hủy giao dịch này?</string>
+    <string name="discard_changed_dialog">HỦY CÁC THAY ĐỔI</string>
+    <string name="keep_edting_dialog">TIẾP TỤC CHỈNH SỮA</string>
+    <string name="accounts_icon">Biểu tưởng tài khoản</string>
+
+
+
+    <integer-array name="listIconAccounts">
+        <item>@drawable/ic_accounts_1</item>
+        <item>@drawable/ic_accounts_2</item>
+        <item>@drawable/ic_accounts_3</item>
+        <item>@drawable/ic_accounts_4</item>
+        <item>@drawable/ic_accounts_5</item>
+        <item>@drawable/ic_accounts_6</item>
+        <item>@drawable/ic_accounts_7</item>
+        <item>@drawable/ic_accounts_8</item>
+        <item>@drawable/ic_accounts_9</item>
+        <item>@drawable/ic_accounts_10</item>
+        <item>@drawable/ic_accounts_11</item>
+        <item>@drawable/ic_accounts_12</item>
+        <item>@drawable/ic_accounts_13</item>
+
+    </integer-array>
+</resources>
+
+

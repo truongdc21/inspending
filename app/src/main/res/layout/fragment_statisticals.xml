@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.statisticals.StatisticalsFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="* Khoản thu"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvMonneyIncome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="5dp"
+                        android:maxLines="1"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:text="0 $"
+                        android:textColor="@color/white"
+                        android:background="@color/expense"
+                        android:textSize="@dimen/textSize_Small"
+                       />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="* Đi vay"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvMonneyDIVAY"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="5dp"
+                        android:maxLines="1"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:text="0 $"
+                        android:textColor="@color/white"
+                        android:background="@color/expense"
+                        android:textSize="@dimen/textSize_Small"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--F3-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                android:maxLines="1"
+                android:text="--------------------------------------------------------------------------------------------------------------" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="* Khoản chi"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvMonneyExpenses"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="5dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:text="0 $"
+                        android:textColor="@color/white"
+                        android:background="@color/income"
+                        android:textSize="@dimen/textSize_Small" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="* Cho vay" />
+
+                    <TextView
+                        android:id="@+id/tvMonneyCHOVAY"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="5dp"
+                        android:maxLines="1"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:text="0 $"
+                        android:textColor="@color/white"
+                        android:background="@color/income"
+                        android:textSize="@dimen/textSize_Small" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--            F3-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gray"
+                android:maxLines="1"
+                android:text="--------------------------------------------------------------------------------------------------------------" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:text="Số dư khoản vay *"
+                    android:textColor="@color/colorf3"
+                    android:textSize="@dimen/textSize_Small" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvMonneyBalanceVAYNO"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorf5"
+                        android:maxLines="1"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:text="0 $"
+
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize_Small" />
+
+                    <include layout="@layout/underlined_layout" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:text="Số dư thu &amp; chi *"
+                    android:textColor="@color/colorf3"
+                    android:textSize="@dimen/textSize_Small" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvMonneyIncomeANDExpenses"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorf5"
+                        android:maxLines="1"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:text="0 $"
+
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize_Small" />
+
+                    <include layout="@layout/underlined_layout" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:text="Tổng tài sản *"
+                    android:textColor="@color/colorf3"
+                    android:textSize="@dimen/textSize_Small" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorf5"
+                        android:maxLines="1"
+                        android:textStyle="italic"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:text="NONE"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize_Small" />
+
+                    <include layout="@layout/underlined_layout" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorF2"
+                    android:paddingBottom="10dp">
+
+                    <TextView
+                        android:id="@+id/tvMaxChart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="2dp"
+                        android:layout_marginTop="10dp"
+                        android:textAlignment="center"
+                        android:text="Xếp theo mức danh mục cao nhất : "
+                        android:textColor="@color/black"
+                        android:drawableTint="@color/black"
+                        android:drawableEnd="@drawable/ic_drop_down"
+
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <!-- F1 -->
+
+                    <TextView
+                        android:layout_marginStart="5dp"
+                        android:id="@+id/tvChartMonney1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="15.000$"
+                        app:layout_constraintLeft_toLeftOf="@id/tvMaxChart"
+                        app:layout_constraintTop_toBottomOf="@id/tvMaxChart" />
+
+                    <TextView
+                        android:id="@+id/tvGachngang1"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="5dp"
+                        android:layout_weight="1"
+                        android:background="@color/gray"
+                        app:layout_constraintBottom_toBottomOf="@id/tvChartMonney1"
+                        app:layout_constraintLeft_toRightOf="@id/tvChartMonney1"
+                        app:layout_constraintRight_toRightOf="parent" />
+
+                    <!-- F2-->
+
+                    <TextView
+                        android:id="@+id/tvChartMonney2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/marginTopChart"
+                        android:text="12.000$"
+                        app:layout_constraintEnd_toEndOf="@+id/tvChartMonney1"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/tvChartMonney1"
+                        app:layout_constraintTop_toBottomOf="@id/tvChartMonney1" />
+
+                    <TextView
+                        android:id="@+id/tvGachngang2"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@color/gray"
+                        app:layout_constraintBottom_toBottomOf="@id/tvChartMonney2"
+                        app:layout_constraintLeft_toLeftOf="@id/tvGachngang1"
+                        app:layout_constraintRight_toRightOf="@id/tvGachngang1" />
+
+                    <!-- F3 -->
+                    <TextView
+                        android:id="@+id/tvChartMonney3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/marginTopChart"
+                        android:text="9.000$"
+                        app:layout_constraintEnd_toEndOf="@+id/tvChartMonney2"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/tvChartMonney2"
+                        app:layout_constraintTop_toBottomOf="@id/tvChartMonney2" />
+
+                    <TextView
+                        android:id="@+id/tvGachngang3"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@color/gray"
+                        app:layout_constraintBottom_toBottomOf="@id/tvChartMonney3"
+                        app:layout_constraintLeft_toLeftOf="@id/tvGachngang2"
+                        app:layout_constraintRight_toRightOf="@id/tvGachngang2" />
+
+                    <!-- F4 -->
+
+                    <TextView
+                        android:id="@+id/tvChartMonney4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/marginTopChart"
+                        android:text="6.000$"
+                        app:layout_constraintEnd_toEndOf="@+id/tvChartMonney3"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/tvChartMonney3"
+                        app:layout_constraintTop_toBottomOf="@id/tvChartMonney3" />
+
+                    <TextView
+                        android:id="@+id/tvGachngang4"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@color/gray"
+                        app:layout_constraintBottom_toBottomOf="@id/tvChartMonney4"
+                        app:layout_constraintLeft_toLeftOf="@id/tvGachngang3"
+                        app:layout_constraintRight_toRightOf="@id/tvGachngang3" />
+
+                    <!--F5 -->
+                    <TextView
+                        android:id="@+id/tvChartMonney5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/marginTopChart"
+                        android:text="3.000$"
+
+                        app:layout_constraintEnd_toEndOf="@+id/tvChartMonney4"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="@+id/tvChartMonney4"
+                        app:layout_constraintTop_toBottomOf="@id/tvChartMonney4" />
+
+                    <TextView
+                        android:id="@+id/tvGachngang5"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@color/gray"
+                        app:layout_constraintBottom_toBottomOf="@id/tvChartMonney5"
+                        app:layout_constraintLeft_toLeftOf="@id/tvGachngang4"
+                        app:layout_constraintRight_toRightOf="@id/tvGachngang4" />
+
+                    <!--F6 -->
+                    <TextView
+                        android:id="@+id/tvChartMonney6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/marginTopChart"
+                        android:text="0$"
+                        app:layout_constraintRight_toRightOf="@id/tvChartMonney5"
+                        app:layout_constraintTop_toBottomOf="@id/tvChartMonney5" />
+
+                    <TextView
+                        android:id="@+id/tvGachngang6"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@color/gray"
+                        app:layout_constraintBottom_toBottomOf="@id/tvChartMonney6"
+                        app:layout_constraintLeft_toLeftOf="@id/tvGachngang5"
+                        app:layout_constraintRight_toRightOf="@id/tvGachngang5" />
+
+                    <!-- F7 Card-->
+                    <TextView
+                        android:id="@+id/tvChartMonney7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/marginTopChart"
+                        android:text=""
+                        app:layout_constraintRight_toRightOf="@id/tvChartMonney6"
+                        app:layout_constraintTop_toBottomOf="@id/tvChartMonney6" />
+
+                    <TextView
+                        android:id="@+id/tvGachngang7"
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@color/gray"
+                        app:layout_constraintBottom_toBottomOf="@id/tvChartMonney7"
+                        app:layout_constraintLeft_toLeftOf="@id/tvGachngang6"
+                        app:layout_constraintRight_toRightOf="@id/tvGachngang6" />
+
+                    <!-- Recyclerview -->
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvSatisticals"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintBottom_toBottomOf="@id/tvGachngang7"
+                        app:layout_constraintLeft_toLeftOf="@id/tvGachngang1"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvGachngang1"
+                        tools:itemCount="8"
+                        tools:listitem="@layout/layout_item_chart_statisticals" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

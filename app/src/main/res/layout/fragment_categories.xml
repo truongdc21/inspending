@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".fragment.categories.CategoriesFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tvTypeCategories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Expenses >> "
+                android:textSize="@dimen/textSize_Small"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent" />
+
+
+            <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                android:id="@+id/progressCircularCost"
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                app:cpb_background_progressbar_color="@color/colorF2"
+                app:cpb_background_progressbar_width="7dp"
+                app:cpb_progress="0"
+                app:cpb_progressbar_color="@color/colorF2"
+                app:cpb_progressbar_width="7dp"
+                app:cpb_round_border="true"
+                app:layout_constraintBottom_toTopOf="@id/tvTypeCategories"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_goneMarginBottom="10dp" />
+
+            <TextView
+                android:id="@+id/tvPrecentCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0%"
+                android:textSize="@dimen/textSize_Medium"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/progressCircularCost"
+                app:layout_constraintEnd_toEndOf="@id/progressCircularCost"
+                app:layout_constraintStart_toStartOf="@id/progressCircularCost"
+                app:layout_constraintTop_toTopOf="@id/progressCircularCost" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:orientation="vertical"
+                android:paddingEnd="20dp"
+                app:layout_constraintBottom_toBottomOf="@+id/progressCircularCost"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/progressCircularCost"
+                app:layout_constraintTop_toTopOf="@+id/progressCircularCost">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tổng số dư"
+                        android:textSize="@dimen/textSize_Small" />
+
+                    <TextView
+                        android:id="@+id/tvMonneyBalance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_weight="1"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textAlignment="textEnd"
+                        android:textSize="@dimen/textSize_so_Small" />
+                </LinearLayout>
+
+                <include layout="@layout/underlined_layout" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/income" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/cost"
+                        android:textSize="@dimen/textSize_so_Small" />
+
+                    <TextView
+                        android:id="@+id/tvMonneyExpenses"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="end"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textSize="@dimen/textSize_so_Small" />
+                </LinearLayout>
+
+                <include layout="@layout/underlined_layout" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@color/expense" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/expenses"
+                        android:textSize="@dimen/textSize_so_Small" />
+
+                    <TextView
+                        android:id="@+id/tvMonneyIncome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textAlignment="textEnd"
+                        android:textSize="@dimen/textSize_so_Small" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/backgr_categories"
+        android:orientation="vertical">
+
+        <worker8.com.github.radiogroupplus.RadioGroupPlus
+            android:id="@+id/rdBalance"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorF2"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rdExpenses"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton_selector"
+                android:button="@android:color/transparent"
+                android:checked="true"
+                android:drawableTint="@color/white"
+                android:text="@string/cost"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobutton_textcolor"
+                android:textSize="@dimen/textSize_Small" />
+
+            <RadioButton
+                android:id="@+id/rdIncome"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:background="@drawable/radiobutton_selector"
+                android:button="@android:color/transparent"
+                android:checked="false"
+                android:drawableTint="@color/white"
+                android:text="Thu nhập"
+                android:textAlignment="center"
+                android:textColor="@drawable/radiobutton_textcolor"
+                android:textSize="@dimen/textSize_Small" />
+
+        </worker8.com.github.radiogroupplus.RadioGroupPlus>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvIncomeMonth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp" />
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+
+</LinearLayout>

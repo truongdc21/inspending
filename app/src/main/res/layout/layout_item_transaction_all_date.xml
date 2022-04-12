@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/itemTvDayofMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="10dp"
+            android:gravity="bottom"
+            android:text="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSize_ExtraLaege"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingTop="5dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/itemTvDayofMonth"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/itemTvMonthandYear"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="2021.07"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize_Small" />
+
+            <TextView
+                android:layout_marginTop="5dp"
+                android:id="@+id/itemTvDayofWeek"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/backgr_gray"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="Th2"
+                android:gravity="bottom"
+                android:layout_weight="1"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvItemMonneyOfDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:paddingStart="8dp"
+            android:paddingTop="3dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="3dp"
+            android:text="+ 3,000 $"
+            android:textAlignment="textEnd"
+            android:textColor="@color/colorf5"
+            android:textSize="@dimen/textSize_Small"
+            android:visibility="visible"
+            tools:ignore="RtlCompat" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="top"
+        android:maxLines="1"
+        android:text="--------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+        android:textSize="12dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/item_rvTransaction_all_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:background="@color/white" />
+
+</LinearLayout>

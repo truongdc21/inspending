@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Đơn vị tiền tệ"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize_Medium"
+        android:textStyle="bold" />
+
+    <androidx.core.widget.NestedScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <worker8.com.github.radiogroupplus.RadioGroupPlus
+                android:id="@+id/radioGroupCurrency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/tvCurrencyBangAnh"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Bảng Anh"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize_Small" />
+
+                    <TextView
+                        android:id="@+id/tvSignCurrencyBangAnh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="center_vertical"
+                        android:text="GBP"
+                        android:textSize="@dimen/textSize_Small" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/tvCurrencyEuro"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Euro"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize_Small" />
+
+                    <TextView
+                        android:id="@+id/tvSignCurrencyEuro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="center_vertical"
+                        android:text="EUR"
+                        android:textSize="@dimen/textSize_Small" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/tvCurrencyThuySi"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Franc Thụy Sĩ"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize_Small" />
+
+                    <TextView
+                        android:id="@+id/tvSignCurrencyThuySi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="center_vertical"
+                        android:text="CHF"
+                        android:textSize="@dimen/textSize_Small" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/tvCurrencyNhandante"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Nhân dân tệ"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize_Small" />
+
+                    <TextView
+                        android:id="@+id/tvSignCurrencyNhandante"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="center_vertical"
+                        android:text="CNY"
+                        android:textSize="@dimen/textSize_Small" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/tvCurrencyRupNga"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Rup Nga"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize_Small" />
+
+                    <TextView
+                        android:id="@+id/tvSignCurrencyRupNga"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="center_vertical"
+                        android:text="RUB"
+                        android:textSize="@dimen/textSize_Small" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/tvCurrencyDollar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="USD - Dollar Mỹ"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize_Small" />
+
+                    <TextView
+                        android:id="@+id/tvSignCurrencyDollar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="center_vertical"
+                        android:text="USD"
+                        android:textSize="@dimen/textSize_Small" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/tvCurrencyVietnam"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Vietnamese dong"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize_Small" />
+
+                    <TextView
+                        android:id="@+id/tvSignCurrencyVietnam"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="center_vertical"
+                        android:text="VNĐ"
+                        android:textSize="@dimen/textSize_Small" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/tvCurrencyYennhat"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Yên Nhật"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize_Small" />
+
+                    <TextView
+                        android:id="@+id/tvSignCurrencyYennhat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="center_vertical"
+                        android:text="JPY"
+                        android:textSize="@dimen/textSize_Small" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/tvCurrencyDollarCanada"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Đô la Canada"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize_Small" />
+
+                    <TextView
+                        android:id="@+id/tvSignCurrencyDollarCanada"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="center_vertical"
+                        android:text="CAD"
+                        android:textSize="@dimen/textSize_Small" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/tvCurrencyDollarUc"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="Đô la Úc"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/textSize_Small" />
+
+                    <TextView
+                        android:id="@+id/tvSignCurrencyDollarUc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="center_vertical"
+                        android:text="AUD"
+                        android:textSize="@dimen/textSize_Small" />
+
+                </LinearLayout>
+            </worker8.com.github.radiogroupplus.RadioGroupPlus>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+        <View
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            />
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="Hủy"
+            android:textColor="@color/yellow" />
+
+        <Button
+            android:id="@+id/btnDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="Xong"
+            android:textColor="@color/yellow" />
+    </LinearLayout>
+</LinearLayout>

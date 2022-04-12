@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/viewBottomSheetFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgr_radius_top"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".fragment.BottomSheet.BottomSheetAddCategoriesFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_remove_bottomsheet"
+        android:backgroundTint="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        android:paddingStart="20dp">
+
+        <TextView
+            android:id="@+id/tvAddTransaction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTint="@color/white"
+            android:gravity="center_horizontal"
+            android:text="@string/addTransaction"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize_Medium"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btnCloseBottomSheet"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@drawable/ic_clear_text"
+            android:backgroundTint="@color/white" />
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:scrollbarStyle="outsideOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:fadeScrollbars="false"
+        android:scrollbars="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TxtInputMonneyTransaction"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="50dp"
+                android:hint="Nhập số tiền"
+                android:textColorHint="@color/white"
+                app:boxStrokeColor="@color/white"
+                app:counterOverflowTextColor="@color/white"
+                app:counterTextColor="@color/white"
+                app:endIconDrawable="@drawable/ic_clear_text"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvFrom"
+                app:layout_constraintTop_toTopOf="parent"
+                app:placeholderTextColor="@color/white"
+                app:startIconDrawable="@drawable/ic_monney"
+                app:startIconTint="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtAddCategoriesMonney"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:textColor="@color/white" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tvFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/backgr_from_to"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="Fr.."
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/TxtInputMonneyTransaction" />
+
+            <TextView
+                android:id="@+id/tvDut"
+                android:layout_width="2dp"
+                android:layout_height="wrap_content"
+                android:text="'''''"
+                android:textColor="@color/white"
+                app:layout_constraintLeft_toLeftOf="@id/tvFrom"
+                app:layout_constraintRight_toRightOf="@id/tvFrom"
+                app:layout_constraintTop_toBottomOf="@id/tvFrom" />
+
+            <TextView
+                android:id="@+id/tvTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/backgr_from_to"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="To.."
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold|italic"
+                app:layout_constraintLeft_toLeftOf="@id/tvDut"
+                app:layout_constraintStart_toStartOf="@+id/tvFrom"
+                app:layout_constraintTop_toBottomOf="@id/tvDut" />
+
+            <LinearLayout
+                android:id="@+id/vgrFrom"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@id/tvFrom"
+                app:layout_constraintEnd_toEndOf="@id/TxtInputMonneyTransaction"
+                app:layout_constraintStart_toStartOf="@+id/TxtInputMonneyTransaction"
+                app:layout_constraintTop_toTopOf="@id/tvFrom">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/backgr_icon_was_select">
+
+                    <ImageView
+                        android:id="@+id/imgFromAccounts"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/ic_monney"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tvSelectAccounts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:text="Chọn tài khoản"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize_Medium" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/vgrTo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="@id/tvTo"
+                app:layout_constraintEnd_toEndOf="@+id/vgrFrom"
+                app:layout_constraintLeft_toLeftOf="@id/vgrFrom"
+                app:layout_constraintStart_toStartOf="@+id/vgrFrom"
+                app:layout_constraintTop_toTopOf="@id/tvTo">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/backgr_icon_was_select">
+
+                    <ImageView
+                        android:id="@+id/imgToCategories"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:background="@drawable/ic_monney"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tvSelectCategories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:text="Chọn danh mục"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize_Medium" />
+            </LinearLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/TxtInput_Write_Note_Transaction"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="40dp"
+
+                android:hint="Ghi chú"
+                android:textColorHint="@color/white"
+                app:boxStrokeColor="@color/white"
+                app:counterOverflowTextColor="@color/white"
+                app:counterTextColor="@color/white"
+                app:endIconDrawable="@drawable/ic_clear_text"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/vgrTo"
+                app:layout_constraintLeft_toLeftOf="@id/imgWriteNote"
+                app:layout_constraintStart_toStartOf="@+id/vgrTo"
+                app:layout_constraintTop_toBottomOf="@id/vgrTo"
+                app:placeholderTextColor="@color/white"
+                app:startIconTint="@color/white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtWrite_note"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeActionLabel="Done"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLength="200"
+                    android:maxLines="3"
+                    android:singleLine="true"
+                    android:textColor="@color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/imgWriteNote"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_write_note"
+                android:backgroundTint="@color/white"
+                app:layout_constraintBottom_toBottomOf="@id/TxtInput_Write_Note_Transaction"
+                app:layout_constraintLeft_toLeftOf="@id/tvFrom"
+                app:layout_constraintTop_toTopOf="@id/TxtInput_Write_Note_Transaction" />
+
+            <ImageView
+                android:id="@+id/imgDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/ic_calendar"
+                android:backgroundTint="@color/white"
+                app:layout_constraintLeft_toLeftOf="@id/imgWriteNote"
+                app:layout_constraintTop_toBottomOf="@id/TxtInput_Write_Note_Transaction" />
+
+            <TextView
+                android:id="@+id/tvShowDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Tuesday , 02/10/2021"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize_Small"
+                app:layout_constraintBottom_toBottomOf="@id/imgDate"
+                app:layout_constraintEnd_toEndOf="@+id/TxtInput_Write_Note_Transaction"
+                app:layout_constraintLeft_toRightOf="@id/imgDate"
+                app:layout_constraintStart_toStartOf="@+id/TxtInput_Write_Note_Transaction"
+                app:layout_constraintTop_toTopOf="@id/imgDate" />
+
+            <TextView
+                android:id="@+id/tvGachDuoi"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/black"
+                app:layout_constraintLeft_toLeftOf="@id/tvShowDate"
+                app:layout_constraintRight_toRightOf="@id/TxtInput_Write_Note_Transaction"
+                app:layout_constraintTop_toBottomOf="@id/tvShowDate" />
+
+            <TextView
+                android:id="@+id/tvAddMoreDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center_horizontal"
+                android:text="Thêm chi tiết"
+                android:textColor="#74E116"
+                android:textSize="@dimen/textSize_Small"
+                android:textStyle="bold|italic"
+                app:layout_constraintEnd_toEndOf="@+id/tvGachDuoi"
+                app:layout_constraintStart_toStartOf="@+id/tvGachDuoi"
+                app:layout_constraintTop_toBottomOf="@id/tvGachDuoi" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btnSaveTransaction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/addTransaction" />
+
+</LinearLayout>

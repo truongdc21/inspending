@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.AddAccountsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/AppBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/backgr"
+            android:paddingBottom="50dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/appbarConstrain"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbarAddAccounts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:navigationIcon="@drawable/ic_close"
+                    app:title="Thêm Tài Khoản"
+                    app:titleTextColor="@color/white" />
+
+                <ImageView
+                    android:id="@+id/btnCheckAdd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/ic_check"
+                    android:backgroundTint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@id/toolbarAddAccounts"
+                    app:layout_constraintEnd_toEndOf="@id/toolbarAddAccounts"
+                    app:layout_constraintTop_toTopOf="@id/toolbarAddAccounts" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txInputLayoutName"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="50dp"
+                    android:hint="Tên tài khoản"
+                    android:textColorHint="@color/white"
+                    app:boxStrokeColor="@color/white"
+                    app:counterOverflowTextColor="@color/white"
+                    app:counterTextColor="@color/white"
+                    app:endIconDrawable="@drawable/ic_clear_text"
+                    app:endIconMode="clear_text"
+                    app:hintTextColor="@color/white"
+                    app:layout_constraintTop_toBottomOf="@id/toolbarAddAccounts"
+                    app:placeholderTextColor="@color/white"
+                    app:startIconDrawable="@drawable/ic_bottomnav_card"
+                    app:startIconTint="@color/white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionDone"
+                        android:textColor="@color/white"
+                        android:inputType="text"
+                        android:textColorHint="@color/white" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txInputLayoutSodu"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="@dimen/marginTop_10dp"
+                    android:layout_marginEnd="50dp"
+                    android:hint="Số dư có sẵn"
+                    android:textColorHint="@color/white"
+                    app:boxStrokeColor="@color/white"
+                    app:counterOverflowTextColor="@color/white"
+                    app:counterTextColor="@color/white"
+                    app:endIconDrawable="@drawable/ic_clear_text"
+                    app:endIconMode="clear_text"
+                    app:hintTextColor="@color/white"
+                    app:layout_constraintTop_toBottomOf="@id/txInputLayoutName"
+                    app:placeholderTextColor="@color/black"
+                    app:startIconDrawable="@drawable/ic_monney"
+                    app:startIconTint="@color/white">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtMonney"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:textColor="@color/white"
+                        />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/linearAddAccounts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintAppBar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/marginTop_20dp"
+            android:text="@string/accounts"
+            android:textAllCaps="true"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/textSize_Small" />
+
+        <LinearLayout
+            android:id="@+id/linearTypeAccounts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginTop_10dp"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/type"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize_Medium" />
+
+            <TextView
+                android:id="@+id/typeAcounts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="type"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/textSize_Small" />
+        </LinearLayout>
+
+        <include layout="@layout/underlined_layout" />
+
+        <LinearLayout
+            android:id="@+id/linearCurrency"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginTop_10dp"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/currencyofAccount"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize_Medium" />
+
+            <TextView
+                android:id="@+id/tvCurrency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="currency"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/textSize_Small" />
+        </LinearLayout>
+
+        <include layout="@layout/underlined_layout" />
+
+        <LinearLayout
+            android:id="@+id/linearDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginTop_10dp"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Destriptions"
+                android:textColor="@color/black"
+                android:textSize="@dimen/textSize_Medium" />
+
+            <TextView
+                android:id="@+id/descriptionAccounts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="desripption"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/textSize_Small" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewIconAccounts"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="25dp"
+        android:padding="5dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintBottom_toTopOf="@id/linearAddAccounts"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/constraintAppBar">
+
+        <ImageView
+            android:id="@+id/icAccounts"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:background="@drawable/ic_accounts_8"
+            android:backgroundTint="@color/blue">
+
+        </ImageView>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

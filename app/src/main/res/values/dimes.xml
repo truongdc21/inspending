@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="textSize_so_Small">12sp</dimen>
+    <dimen name="textSize_Small">16sp</dimen>
+    <dimen name="textSize_Medium">18sp</dimen>
+    <dimen name="textSize_Large">24sp</dimen>
+    <dimen name="textSize_ExtraLaege">32sp</dimen>
+    <dimen name="textSize_DoubleExtra">48sp</dimen>
+    <dimen name="marginTop_10dp">10dp</dimen>
+    <dimen name="marginTop_20dp">20dp</dimen>
+    <dimen name="marginTopChart">10dp</dimen>
+
+    <dimen name="Bold">46px</dimen>
+    <dimen name="SemiBold">32px</dimen>
+    <dimen name="Medium">18px</dimen>
+    <dimen name="Regular">14px</dimen>
+    <dimen name="Light">12px</dimen>
+
+</resources>

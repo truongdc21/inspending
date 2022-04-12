@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:text="Chọn Danh Mục"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSize_Large" />
+
+    <include layout="@layout/underlined_layout" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabItemSelectCategories"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tabItemIncome"
+            android:text="@string/cost" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabItemExpenses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/expenses" />
+    </com.google.android.material.tabs.TabLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/vpgSelectCategoriesDialog"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp" />
+
+</LinearLayout>
